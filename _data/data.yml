@@ -40,8 +40,11 @@ sidebar:
   github-text: GitHub     # 화면에 보이는 글자 (비우면 "GitHub")
   orcid:            # 예: 0000-0000-0000-0000
   scholar:          # Google Scholar user id (citations?user= 뒤의 값)
-  pdf-en:           # 영문 CV PDF 링크
-  pdf-kr:           # 국문 CV PDF 링크
+  pdf-en: assets/pdf/SangwooKim_CV_en.pdf   # 영문 CV PDF (저장소 안 경로 또는 https:// 전체 주소)
+  pdf-kr: assets/pdf/SangwooKim_CV_ko.pdf   # 국문 CV PDF
+
+  # CV 기준일: 사이드바 맨 아래와 PDF에 표시. 내용을 고치면 날짜도 바꾸세요. 비우면 사이트 빌드 날짜
+  last-updated: 2026-11-23
 
   languages:
     title: Languages

@@ -1,0 +1,8 @@
+{% assign cv_date = site.data.data.sidebar.last-updated | default: site.time %}
+<div class="updated-container container-block">
+  {% if page.lang == "ko" %}
+  최종 업데이트: {{ cv_date | date: "%Y.%m.%d." }}
+  {% else %}
+  Last updated: {{ cv_date | date: "%b %-d, %Y" }}
+  {% endif %}
+</div>

@@ -37,6 +37,7 @@ exclude:
   - docker-compose.yml
   - LICENSE.md
   - vendor
+  - tools
 
 # Development Settings
 port: 4000

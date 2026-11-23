@@ -27,3 +27,12 @@ bundle exec jekyll serve
 - `present` in `time` fields is shown as `현재` on the Korean page automatically.
 - Lists: `research-interests.info_ko` replaces `info` on the Korean page.
 - Helper: `_includes/t.html`.
+
+## CV PDF / last-updated date
+- `sidebar.last-updated` in `_data/data.yml` is shown at the bottom of the sidebar and in the PDF.
+- PDFs live in `assets/pdf/` and are linked from the sidebar (`pdf-en`, `pdf-kr`).
+- After editing content, update `last-updated` and rebuild the PDFs:
+  ```bash
+  bash tools/make-pdf.sh
+  ```
+  Requires Ruby/Bundler (Jekyll), Node and Playwright (`npm i -g playwright && npx playwright install chromium`).

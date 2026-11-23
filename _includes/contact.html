@@ -140,13 +140,15 @@
 
     {% if sidebar.pdf-en %}
     <li class="pdf-en"><i class="fas fa-file-pdf"></i>
-      <a href="{{ sidebar.pdf-en }}" target="_blank">CV (English)</a>
+      {% assign pdf_en = sidebar.pdf-en %}{% unless pdf_en contains '://' %}{% assign pdf_en = site.baseurl | append: '/' | append: pdf_en %}{% endunless %}
+      <a href="{{ pdf_en }}" target="_blank">{% if page.lang == "ko" %}CV (영문){% else %}CV (English){% endif %}</a>
     </li>
     {% endif %}
 
     {% if sidebar.pdf-kr %}
     <li class="pdf-kr"><i class="fas fa-file-pdf"></i>
-      <a href="{{ sidebar.pdf-kr }}" target="_blank">CV (한국어)</a>
+      {% assign pdf_kr = sidebar.pdf-kr %}{% unless pdf_kr contains '://' %}{% assign pdf_kr = site.baseurl | append: '/' | append: pdf_kr %}{% endunless %}
+      <a href="{{ pdf_kr }}" target="_blank">{% if page.lang == "ko" %}CV (국문){% else %}CV (한국어){% endif %}</a>
     </li>
     {% endif %}
 
