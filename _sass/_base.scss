@@ -211,10 +211,15 @@ p {
       color: rgba(256, 256, 256, 0.3);
     }
   }
+  // last-updated date: hidden on the website, shown only in print / PDF
   .updated-container {
+    display: none;
     padding-top: 0;
     font-size: 12px;
     color: rgba(256, 256, 256, 0.45);
+    @media print {
+      display: block;
+    }
   }
   .languages-container {
     .lang-desc {
